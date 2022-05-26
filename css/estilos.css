@@ -6,15 +6,48 @@ body {
   padding: 0;
   background-color: #D8F3DC;
 }
+nav {
+  width: 100%;
+  height: 30px;
+  background-color: #112C1D;
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 20px;
+}
+nav ul{
+  display: flex; /* disposición flexible*/
+  justify-content: center; /* disposición en el centro*/
+  list-style: none; /* los estilos de lista*/
+}
+nav ul a{
+  margin-right: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #c0f7db;
+}
  .name{
    width : 100%;
    height: 300px;
+   display: flex;
    background-color: #40916C;
    transform: skewY(-4deg);
  }
+ .name .foto{
+   position: absolute;
+   top: 30%;
+   right: 5%;
+   width: 200px;
+   height: 200px;
+   border-radius: 100%;
+   transform: skewY(4deg);
+   overflow: hidden; /*ocultar lo sobrante*/
+ }
+ .name .foto img{
+   width: 250px;
+   height: 305px;
+ }
 .name .content {
   width: 50%;
-  heigth: 50&;
   position: absolute;
   left: 25%;
 }
@@ -36,12 +69,13 @@ body {
   margin-bottom: 0px;
 }
 .info {
-  width: 90%;
-  height: auto;
+  width: 90%; /* dar sangría */
+  height: auto; /* altura automatica */
   background-color: #40916C;
-  margin: 5% auto;
-  padding: 20px;
+  margin: 5% auto; /* espaciado exterior automatica */
+  padding: 20px;  /* espaciado interior automatica */
   border-radius: 20px;
+  text-align: center;
 }
 .info .tituloSeccion {
   color: #112C1D;
@@ -50,6 +84,7 @@ body {
   text-align: center;
   font-weight: bolder;
   border-bottom: 2px #D8F3DC solid;
+  margin-top: -20px;
 }
 .info .tituloInfo {
   color: #112C1D;
@@ -57,12 +92,26 @@ body {
   font-size: large;
   font-weight: bolder;
   display: inline;
-  margin-right: 30px;
+  margin-right: 20px;
+}
+.info img {
+  width: 20px;
 }
 .info .infoInfo {
   color: #112C1D;
   font-family: 'Oswald', sans-serif;
   font-size: large;
   font-weight: normal;
-  display: inline;
+  display: inline; /* organización en linea*/
+  margin-right: 50px;
+}
+
+.info span {
+  display: inline-block; /* organización en linea*/
+  width: auto;
+  height: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: aqua;
+  color: #c0f7db;
 }
